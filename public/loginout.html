@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1 id="h1">您已经退出登录,3秒后自动跳转到首页</h1>
+<script>
+    var n=2;
+    sessionStorage.clear();
+    setInterval(function(){
+        h1.innerHTML=`您已经退出登录,${n}秒后自动跳转到首页`;
+        n--;
+        if(n===-1){
+            location.href="index.html";
+        }
+    },1000);
+</script>
+</body>
+</html>

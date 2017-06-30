@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<div id="container">
+    <div class="img">
+        <img src="imgs/logo.png" alt=""/>
+    </div>
+    <h1>注册小米账号</h1>
+
+    <form >
+    <div class="rgbox">
+        <div class="inputbg">
+            <input type="text" placeholder="请输入用户名" id="uname">
+        </div>
+    </div>
+    <div class="error" id="er1">
+        <span id="s1">用户名为10位以内的数字字母或下划线组合</span>
+    </div>
+    <div class="rgbox">
+        <div class="inputbg">
+            <input type="text" placeholder="请输入密码" id="upwd">
+        </div>
+    </div>
+    <div class="error " id="er2">
+        <span id="s2">密码是6位数字且不能为空</span>
+    </div>
+        <!--<div class="rgbox">-->
+            <!--<div class="inputbg">-->
+                <!--<input type="text" placeholder="请输入图片数字图片验证码" id="">-->
+                <!--<img src="1.jpg" alt=""/>-->
+            <!--</div>-->
+
+        <!--</div>-->
+    <br>
+        <button id="btn" class="register" type="button">立即注册</button>
+    </form>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

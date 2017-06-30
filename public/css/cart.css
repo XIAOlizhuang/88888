@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font:14px "microsoft yahei",Arial,Helvetica,sans-serif;
+    color:#333;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.lf{
+    float:left;
+}
+.rt{
+    float:right;
+}
+.clear{
+    clear:both;
+}
+a{
+    color:#333;
+    text-decoration: none;
+}
+#cart-header{
+    width:100%;
+    border-bottom:2px solid #ff6700;
+}
+#cart-header:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#cart-header>.cart-header-list{
+    width:1226px;
+    height:102px;
+    margin:0 auto;
+    line-height: 102px;
+}
+#cart-header>.cart-header-list>img{
+    margin-top:20px;
+    margin-right:56px;
+}
+#cart-header>.cart-header-list>h2{
+    font-size: 28px;
+    font-weight: 200;
+}
+#cart-header>.cart-header-list>p{
+    width:356px;
+    height:20px;
+    line-height: 20px;
+    font-size: 12px;
+   margin-left:10px;
+    color:#757575;
+    margin-top:45px;
+}
+#page-main{
+    background-color:#f5f5f5;
+    width:100%;
+    padding-top: 38px;
+    padding-bottom: 38px;
+}
+#page-main:after{
+    content: "";
+    display: block;
+}
+.page-main-list{
+    width:1226px;
+    margin: 0 auto;
+    min-height:100px;
+    background-color: #fff;
+}
+table{border-collapse: collapse;}
+thead>tr{
+    width:100%;
+    height:70px;
+}
+
+td{
+    border-top:1px solid #E0E0E0;
+}
+td,th{
+    text-align: left;
+}
+
+td>div{
+    width:120px;
+    padding-right:40px;
+    height:86px;
+}
+td>div>img{
+    width:90%;
+    margin-top:7px;
+    margin-left:20px;
+}
+
+#cart tbody td input[type='text']{
+    border:1px solid #CACBCB;
+    border-left:0;
+    border-right:0;
+    height:40px;
+    width:72px;
+    padding:0;
+    text-align: center;
+}
+#cart tbody td button{
+    border:1px solid #CACBCB;
+    height:38px;
+    width:38px;
+    padding:0;
+    background-color: #fff;
+    box-sizing:content-box;
+}
+td>span{
+    color:#ff6700;
+}
+#cart_footer{
+    width:100%;
+    height:100px;
+    background-color: #f5f5f5;
+}
+#cart_footer>div{
+    width:1226px;
+    text-align: right;
+    margin: 0 auto;
+    background-color: #fff;
+    height:70px;
+    line-height: 70px;
+    margin-bottom: 20px;
+}
+
+#cart_footer>div>span{
+    font-size: 16px;
+    color: #ff6700;
+    font-weight: 700;
+}
+#cart_footer>div>button{
+    display: inline-block;
+    width: 96px;
+    height: 52px;
+    overflow: hidden;
+    background-color:#ff6700;
+    border:0;
+    line-height: 52px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "microsoft yahei";
+    margin-left:20px;
+}

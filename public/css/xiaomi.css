@@ -1,0 +1,890 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font:14px "microsoft yahei",Arial,Helvetica,sans-serif;
+    color:#333;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.lf{
+    float:left;
+}
+.rt{
+    float:right;
+}
+.clear{
+    clear:both;
+}
+a{
+    color:#333;
+    text-decoration: none;
+}
+a:hover{
+    color:#FF6700;
+}
+#top{
+    width:100%;
+    margin: 0 auto;
+}
+#banner,#banner2,#banner3,#main,#foot-box,#footer{
+    width:1226px;
+    margin: 0 auto;
+}
+/*******模块1：页面顶部******/
+#top{
+    /*高度，行高，背景颜色，*/
+    height:40px;
+    line-height: 40px;
+    background: #333;
+}
+#top-header{
+    width:1226px;
+    margin: 0 auto;
+}
+#top-header>.lf>li{
+    /*左浮动*/
+    float: left;
+}
+#top-header>ul>li>a{
+    color:#bdbdbd;
+}
+#top-header>ul>li>span{
+   color: #bdbdbd;
+    margin:0 5px;
+}
+/*导航右边显示*/
+#top-header>ul.rt>li{
+    float:left;
+}
+#top-header>ul.rt>li>h3{
+    color:#ff6700;
+    margin-right: 10px;
+}
+#top-header>ul.rt>li>h3 *{
+    color:#ff6700;
+    margin-right: 10px;
+}
+#top-header>ul.rt>li.shoppingcart{
+    /*左外边距 相对定位*/
+    margin-left:20px;
+    position: relative;
+}
+
+#top-header>ul.rt>li.shoppingcart>a{
+    /*内边距 行内块 高度 行高 背景图*/
+    padding:0 10px 0px 35px;
+    display: inline-block;
+    height:40px;
+    line-height: 40px;
+    background: url(../imgs/cart.png) no-repeat 5px 10px;
+    background-color: #424242;
+}
+#top-header>ul.rt>li.shoppingcart>#noproduct {
+    width:305px;
+    height:100px;
+    background:#fff;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+    top:40px;
+    left:-200px;
+    z-index: 10;
+    display: none;
+}
+#top-header>ul.rt>li.shoppingcart:hover #noproduct{
+        display: block;
+}
+#top-header>ul.rt>li.shoppingcart:hover a{
+    background: url(../imgs/cart-hover.png) no-repeat 0px 10px;
+    cursor: pointer;
+    color:#FF6700;
+    background-color: #fff;
+}
+/*模块二logo和搜索框*/
+#top_main{
+    width:100%;
+    height:100px;
+}
+#container-header{
+    width:1226px;
+    height:100px;
+    margin:0 auto;
+}
+#container-header>#left-logo{
+    width:62px;
+    height:60px;
+    margin-top:22px;
+}
+#container-header>#middle-items{
+    width:850px;
+    height:100px;
+}
+#container-header>#middle-items>ul{
+    width:850px;
+    height:100px;
+    padding:12px 0px 0px 30px;
+}
+#container-header>#middle-items>ul>li{
+    float:left;
+    font-size: 16px;
+}
+#container-header>#middle-items>ul>li>a{
+    display:inline-block;
+    padding:22px 10px 38px 10px;
+}
+
+/*右边的搜索框*/
+#search-box{
+    width:296px;
+    margin-top:25px;
+    margin-left: -3px;
+    height:50px;
+    position:relative;
+}
+/*输入框*/
+#search-box .first-input{
+    width:245px;
+    height:50px;
+    outline: none;
+    padding-left:10px;
+    border:1px solid #e0e0e0;
+}
+/*按钮提交框*/
+#search-box .second-input{
+    width:52px;
+    height:50px;
+    border:1px solid #E0E0E0;
+    border-left:1px solid transparent;
+    background: url(../imgs/search.png) no-repeat 12px center;
+}
+#search-box #sub{
+    position:absolute;
+    top:0px;
+    left:243px;
+    width:52px;
+    height:50px;
+}
+#search-box #sub:hover{
+    background:#FF6700 ;
+}
+#search-box #sub:hover .second-input{
+    background-image: url(../imgs/search2.png);
+}
+#search-box:hover{
+    border-color:#A9A9A9;
+}
+/*开始做#middle-items下拉框*/
+
+#middle-items>ul.lf{
+    position: relative;
+}
+#middle-items .container{
+    position:absolute;
+    top:100px;
+    left:-200px;
+    width:1440px;
+    /*padding:0 40px 0 40px;*/
+    height: 0px;
+    overflow: hidden;
+    transition: height 1s;
+}
+/*鼠标移入事件让其高度变成220px,同时增大z-index*/
+#middle-items>ul>li:hover .container{
+    height:220px;
+    z-index: 2;
+}
+/*弹性布局*/
+#middle-items ul.container{
+    z-index: 2;
+    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    justify-content: space-around;
+    background: #fff;
+}
+#middle-items .container>li{
+    text-align: center;
+}
+#middle-items .container li img{
+    padding:0px 86px;
+}
+#middle-items .container>li:not(:first-child) img{
+    border-left:1px solid #ddd ;
+}
+#middle-items .container>li *{
+   font-style: normal;
+    font-size: 12px;
+}
+#middle-items .container>li i{
+    color:#FF6700;
+}
+/*第三 banner广告部分*/
+#banner{
+    /*高度*/
+    height:460px;
+}
+#banner>.slider{
+    position:relative;
+}
+#banner>.slider .slider-box{
+    /*把图片中多余的图片隐藏起来  并且设置决定定位脱离文档流，让下面左边列表+鼠标移入出现对应的产品列表上前站位*/
+    overflow: hidden;
+    width:1226px;
+    height:460px;
+    position: absolute;
+}
+#banner>.slider .slider-box>ul {
+    /*设置数字的定位*/
+    position: absolute;
+    bottom:23px;
+    right: 41px;
+}
+#banner>.slider .slider-box>ul>li{
+    /*设置数字的浮动*/
+    float:left;
+    padding:5px 10px;
+    /*border:1px solid #ddd;*/
+    border-radius: 50%;
+    color:#fff;
+    background: #3e3e3e;
+    margin-left:8px;
+}
+/*slider-box 里所有的图片都设置z-index:0*/
+#banner .slider-box>img{
+    position:absolute;
+    z-index:-1;
+}
+/*找到第一个图片设置z-index为1*/
+#banner .slider-box>img.active{
+    z-index:0;
+}
+/*li带了active就让背景颜色为京东红*/
+#banner .slider-box>ul>li.active{
+    background: #E4393C;
+}
+/*鼠标移入事件*/
+#banner .slider-box>ul>li:hover{
+    cursor: pointer;
+}
+/*2、左边列表+鼠标移入出现对应的产品列表*/
+#product-list ul#left{
+    position: relative;
+    height:460px;
+    width:234px;
+    padding:20px 0px;
+    background-color: rgba(0,0,0,.4);
+}
+#product-list #left>li{
+    height:42px;
+    font-size: 14px;
+}
+/*鼠标移入事件*/
+#product-list #left>li:hover{
+    background-color: #F25807;
+}
+#product-list #left>li:hover .products{
+    display: block;
+}
+/*设置列表中a的样式*/
+#product-list #left>li>a{
+    display:inline-block;
+    width:234px;
+    height:42px;
+    line-height: 42px;
+    color:#fff;
+    padding-left:30px;
+}
+/*右边对应左边的列表产品*/
+#product-list .products{
+    /*绝对定位 宽 高 */
+    position: absolute;
+    top:0px;
+    left:234px;
+    width:775px;
+    height:460px;
+   border:1px solid #e0e0e0;
+    border-left:0px;
+    background: #fff;
+    padding:0px 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    display: none;
+}
+/*让ul 列表弹性布局*/
+#product-list .products>ul{
+    padding:1px 0px;
+    height:458px;
+    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    flex-direction: column;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+}
+#product-list .products>ul>li{
+    position:relative;
+    width:265px;
+    height:76px;
+    line-height: 76px;
+    text-align: center;
+}
+#product-list .products>ul>li>img{
+    /*取消img默认基线对齐方式*/
+    margin-left:70px;
+    vertical-align: middle;
+}
+#product-list .products>ul>li>span{
+    /*文本左对齐*/
+    display: inline-block;
+    width:150px;
+    height:22px;
+    line-height: 22px;
+    text-align: left;
+}
+/*鼠标移入事件 移到小米文字color改变*/
+#product-list .products>ul>li:hover *{
+    cursor: pointer;
+}
+#product-list .products>ul>li:hover span{
+    color:#F25807;
+}
+#product-list .products>ul>li:hover a{
+    background-color: #F25807;
+    color:#fff;
+}
+#product-list .products>ul>li>a{
+    /*绝对定位 宽 高 行高 颜色 边框 */
+    font-size: 14px;
+    position: absolute;
+    top:28px;
+    left:0px;
+    width:58px;
+    height:22px;
+    line-height: 22px;
+    color:#F25807;
+    border:1px solid #F25807;
+}
+/*依次给列表中的每一项进行修改*/
+#product-list .pro2, #product-list .pro6{
+    width:530px;
+}
+
+#product-list .pro7, #product-list .pro8,#product-list .pro9,#product-list .pro10{
+    width:265px;
+}
+/*开始做banner2部分*/
+/*把整个banner2进行弹性布局*/
+#banner2{
+    width:1226px;
+    height:170px;
+    margin-top:14px;
+    display: flex;
+    /*display: -webkit-box;      /!* OLD - iOS 6-, Safari 3.1-6 *!/*/
+    /*display: -moz-box;         /!* OLD - Firefox 19- (buggy but mostly works) *!/*/
+    /*display: -ms-flexbox;      /!* TWEENER - IE 10 *!/*/
+    /*display: -webkit-flex;     /!* NEW - Chrome *!/*/
+   justify-content: space-between;
+}
+/*让ul再次弹性布局*/
+#banner2>.sixed{
+    width:234px;
+    height:170px;
+    background-color:#5F5750;
+    padding:2px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#banner2>.sixed>li>a{
+    display: inline-block;
+    width:76px;
+    height:82px;
+    padding-top:30px;
+    border:1px solid #665E57;
+    border-top:none;
+}
+#banner2>.sixed>li p{
+    width:70px;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    color:#CDCAC8;
+}
+#banner2>.sixed>li .one{
+    background:url("../imgs/background-list/1.png") no-repeat 20px 10px;
+}
+#banner2>.sixed>li .two{
+    background:url("../imgs/background-list/2.png") no-repeat 20px 10px;
+}
+#banner2>.sixed>li .three{
+    background:url("../imgs/background-list/3.png") no-repeat 20px 10px;
+}
+#banner2>.sixed>li .four{
+    background:url("../imgs/background-list/4.png") no-repeat 20px 10px;
+}
+#banner2>.sixed>li .five{
+    background:url("../imgs/background-list/5.png") no-repeat 20px 10px;
+}
+#banner2>.sixed>li .six{
+    background:url("../imgs/background-list/6.png") no-repeat 20px 10px;
+}
+/*六幅图标鼠标移入事件*/
+#banner2>.sixed>li a:hover p {
+    color: #fff;
+}
+#banner2>.sixed>li:hover .one{
+   background-image: url(../imgs/background-list/1.1.png);
+}
+#banner2>.sixed>li:hover .two{
+     background-image: url(../imgs/background-list/2.2.png);
+ }
+#banner2>.sixed>li:hover .three{
+    background-image: url(../imgs/background-list/3.3.png);
+}
+#banner2>.sixed>li:hover .four{
+    background-image: url(../imgs/background-list/4.4.png);
+}
+#banner2>.sixed>li:hover .five{
+    background-image: url(../imgs/background-list/5.5.png);
+}
+#banner2>.sixed>li:hover .six{
+    background-image: url(../imgs/background-list/6.6.png);
+}
+/*<!--3.2 banner广告部分三小米明星单品-->*/
+#banner3{
+    width:1226px;
+    height:400px;
+    margin-top:26px;
+}
+#banner3 .starHead{
+    height:58px;
+    line-height: 58px;
+    position: relative;
+}
+#banner3 .starHead h2{
+    font-size: 22px;
+    font-weight: 200;
+    color: #333;
+}
+#banner3 .starHead .icons{
+    width:77px;
+    height:30px;
+    position:absolute;
+    top:18px;
+    right:0px;
+}
+/*让span变成行内块元素*/
+#banner3 .starHead .icons>span{
+    display:inline-block;
+    width:36px;
+    height:30px;
+    border:1px solid #ddd;
+}
+#banner3 .starHead .icons>span.active{
+    border-color: #ff6700;
+}
+#banner3 .starHead .icons>span.a1{
+    background:url("../imgs/background-list/xiao1.png") no-repeat 3px center;
+}
+#banner3 .starHead .icons>span.a2{
+    background:url("../imgs/background-list/da1.png") no-repeat 6px center;
+}
+/*开始做广告轮播之第一个ul*/
+.singleStar{
+    width:1226px;
+    height:340px;
+    position: relative;
+    /*超出隐藏*/
+    overflow: hidden;
+}
+/*弹性布局*/
+.singleStar>ul{
+    width:2467px;
+    position: absolute;
+    display:flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    left:-1240px;
+    justify-content: space-between;
+}
+.singleStar>ul>li{
+    width:234px;
+    padding-top:39px;
+    text-align: center;
+    background: #FAFAFA;
+}
+/*修改li中span颜色*/
+.singleStar>ul>li span{
+    color:#B0B0B0;
+}
+/*清除li中i默认的样式*/
+#banner3 .singleStar li i{
+    font-style: normal;
+    color:#FF6709;
+}
+/*给每一个li中class属性一样的设置相同的上边框*/
+.singleStar>ul>li.first-one{
+    border-top:1px solid  #FFAC13;
+}
+.singleStar>ul>li.first-two{
+    border-top:1px solid  #83C44E;
+}
+.singleStar>ul>li.first-three{
+    border-top:1px solid  #2196F3;
+}
+.singleStar>ul>li.first-four{
+    border-top:1px solid  #E53935;
+}
+.singleStar>ul>li.first-five{
+    border-top:1px solid  #00C0A5;
+}
+/*给li中的字line-height*/
+.singleStar>ul>li *{
+   margin-bottom:10px;
+}
+/*给li里所有的十张图片宽度设置为50%*/
+.singleStar>ul>li>img{
+    width:50%;
+}
+
+/*开始写section部分*/
+#main{
+    width:100%;
+    min-height:1px;
+    background-color: #F5F5F5;
+}
+#main>*{
+    margin:0 auto;
+}
+#main>.main-items{
+    width:1226px;
+    height:686px;
+    border:1px solid #ddd;
+}
+/*抬头标题部分的样式设置*/
+#main>.main-items .wise{
+    width:1226px;
+    height:58px;
+    line-height: 58px;
+    position: relative;
+}
+/*让下面的Ul右浮动*/
+#main>.main-items .wise>ul{
+    position: absolute;
+    top:0px;
+    right:0px;
+}
+/*里面的li进行左浮动*/
+#main>.main-items .wise>ul>li{
+    float: left;
+    padding:0px 10px;
+    font-size: 16px;
+}
+#main>.main-items .wise>ul>li>a.actived{
+    color:#ff6700;
+}
+#main>.main-items .wise>ul>li>a.actived:hover{
+    border-bottom:2px solid #FF6700;
+}
+/*<!-- 下面来尝试一下所有的图片都用弹性布局来做-->*/
+#main>.main-items .flex{
+    width:1226px;
+    height:614px;
+}
+#main>.main-items .flex>ul.flexed{
+    width:1226px;
+    height:614px;
+    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+}
+/*设置所有的ul 里面的li的属性*/
+#main>.main-items .flex>ul>li{
+    width:234px;
+    height:300px;
+    background-color: #fff;
+    text-align: center;
+    transition: margin-top 0.3s ;
+}
+/*清除所有图片的默认基线问题*/
+#main>.main-items .flex>ul>li img{
+    vertical-align: bottom;
+}
+/*设置li中p.class的字体样式*/
+#main>.main-items .flex>ul>li>p.new{
+    display: inline-block;
+    width:64px;
+    height:20px;
+    color:#fff;
+    background-color: #83C44E;
+}
+#main>.main-items .flex>ul>li>span{
+    font-size: 12px;
+    color:#b0b0b0;
+}
+#main>.main-items .flex>ul>li>p.mi-price{
+    color:#ff6700;
+}
+#main>.main-items .flex>ul>li:hover{
+    margin-top: -2px;
+}
+/*设置除了第一个和第六个之外所有的li相对定位*/
+#main>.main-items .flex>ul>li:not(:first-child),#main>.main-items .flex ul li:not(:nth-child(6)){
+        position:relative;
+}
+/*设置所有li里带hide的div属性样式*/
+#main>.main-items .flex>ul>li>div.hide{
+    position:absolute;
+    width:234px;
+    height:40px;
+    background-color:rgb(255,103,0);
+    bottom:0px;
+    right:0px;
+    height:0px;
+    overflow: hidden;
+    transition: height .3s;
+}
+#main>.main-items .flex>ul>li>div.hide>p{
+    color:#fff;
+    font-size: 12px;
+}
+#main>.main-items .flex>ul>li>div.hide>span{
+    color:#FFC299;
+    font-size: 12px;
+}
+#main>.main-items .flex>ul>li>div.hide>p{
+    height:16px;
+    overflow: hidden;
+}
+/*鼠标移入li时候就会显示该评论*/
+#main>.main-items .flex>ul>li:hover div.hide {
+    height: 40px;
+}
+/*开始做尾部*/
+#foot-box{
+    width:100%;
+    min-height: 1px;
+    background-color: #fff;
+}
+#foot-box>.four-icons{
+    width:1226px;
+    height:80px;
+    margin:0 auto;
+    padding:27px 0px;
+    border-bottom: 1px solid #e0e0e0;
+}
+#foot-box>.four-icons>ul{
+    width:1226px;
+    height:25px;
+    line-height: 25px;
+}
+#foot-box>.four-icons>ul li{
+    float: left;
+    width:19.8%;
+    text-align: center;
+    font-size: 16px;
+}
+#foot-box>.four-icons>ul li:not(:first-child){
+    border-left:1px solid #e0e0e0;
+}
+/*现在给每一个li里插入背景图片 并且鼠标移入修改a的颜色*/
+#foot-box>.four-icons>ul li:hover a{
+    color:#ff6700;
+}
+/*第一个*/
+#foot-box>.four-icons>ul li.wx{
+    background:url("../imgs/background-list/wx.png") no-repeat 40px center;
+}
+#foot-box>.four-icons>ul li.wx:hover{
+    background-image:url("../imgs/background-list/wx2.png");
+}
+/*第二个*/
+#foot-box>.four-icons>ul li.sven{
+    background:url("../imgs/background-list/sven.png") no-repeat 40px center;
+}
+#foot-box>.four-icons>ul li.sven:hover{
+    background-image:url("../imgs/background-list/sven2.png");
+}
+/*第三个*/
+#foot-box>.four-icons>ul li.fifth{
+    background:url("../imgs/background-list/fif.png") no-repeat 40px center;
+}
+#foot-box>.four-icons>ul li.fifth:hover{
+    background-image:url("../imgs/background-list/fif2.png");
+}
+/*第四个*/
+#foot-box>.four-icons>ul li.Award{
+    background:url("../imgs/background-list/award.png") no-repeat 40px center;
+}
+#foot-box>.four-icons>ul li.Award:hover{
+    background-image:url("../imgs/background-list/award2.png");
+}
+/*第五个*/
+#foot-box>.four-icons>ul li.place{
+    background:url("../imgs/background-list/place.png") no-repeat 32px center;
+}
+#foot-box>.four-icons>ul li.place:hover{
+    background-image:url("../imgs/background-list/place2.png");
+}
+/*下面开始写热线电话帮助中心*/
+#footer-links{
+    margin: 0 auto;
+    width:1226px;
+    height:192px;
+    padding:40px 0px;
+}
+#footer-links dl{
+    width:160px;
+    height:112px;
+    float: left;
+    text-align: left;
+}
+#footer-links dl dt{
+    font-size: 14px;
+    color:#424242;
+    margin-bottom: 26px;
+}
+#footer-links dl dd{
+    font-size: 12px;
+    color:#757575;
+    margin-top:10px;
+}
+#footer-links dl dd:hover{
+    color:#ff6700;
+}
+.hotkeys{
+    width:252px;
+    border-left:1px solid #E0E0E0;
+    text-align: center;
+}
+.hotkeys .number{
+    font-size: 22px;
+    color:#FF6700;
+}
+.hotkeys .wek{
+    font-size: 12px;
+}
+.hotkeys a{
+    display: inline-block;
+    width:118px;
+    height:28px;
+    line-height: 28px;
+    color:#F25807;
+    background-image: url("../imgs/background-list/message.png");
+    background-position: 2px 3px;
+    background-repeat: no-repeat;
+    border:1px solid #ff6700;
+    font-size: 12px;
+}
+#a-parent{
+    display: inline-block;
+    width:120px;
+    height:30px;
+    margin-top:5px;
+}
+#a-parent:hover{
+    background: #ff6700;
+}
+/*鼠标移入a事件*/
+.hotkeys a:hover{
+    background-image: url("../imgs/background-list/message2.png");
+    color:#fff;
+}
+
+/*最后一步底部备案号*/
+#footer{
+    width:100%;
+    height:106px;
+    padding: 30px;
+    background: #fff;
+}
+#footer>.container{
+    width:1226px;
+    margin:0 auto;
+    position: relative;
+}
+#footer>.container .end-logo{
+    margin-right:10px;
+}
+#footer>.container>p{
+    color:#b0b0b0;
+}
+#footer>.container>span{
+    color:#C0B0B6;
+    font-size: 12px;
+    float: left;
+}
+#footer>.container .four-end-icons{
+    position:absolute;
+    top:0px;
+    right:0px;
+    width:375px;
+    height:28px;
+
+}
+#footer>.container .four-end-icons>img{
+    width:83px;
+}
+/*楼层点亮的样式*/
+/*附加导航相关样式*/
+.affix {
+    position: fixed;
+    left: 20px;
+    top: 500px;
+    /*每一个em放一个汉字,左右两边各留0.4em空间*/
+    width: 2.8em;
+    text-align: center;
+    background: #918888;
+    border-radius: 3px;
+    box-shadow: 0 0 4px #918888;
+    display: none;
+}
+.affix li {
+    padding: 12px 0;
+}
+.affix li + li {
+    border-top: 1px solid #b1aaaa;
+}
+.affix li.active {
+    background: #ff6700;
+}
+.affix a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#msg{
+    width:200px;
+    height:200px;
+    position:fixed;
+    right:30px;
+    bottom:-200px;
+    background:url(../imgs/xmsj-list/14.jpg) no-repeat;
+    transition: all 2s linear;
+}
+#msg>a{
+    float:right;
+    padding:5px 10px;
+    border:1px solid #ff6700;
+    cursor: pointer;
+}

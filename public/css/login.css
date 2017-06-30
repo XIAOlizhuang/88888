@@ -1,0 +1,72 @@
+body{
+    padding:0px;
+    margin:0px;
+}
+#header{
+    width:100%;
+    height:100px;
+}
+#header>img{
+   margin:20px 130px;
+}
+#section{
+    width:100%;
+    min-height: 100px;
+    position: relative;
+}
+#section>.login{
+    width:400px;
+    height:480px;
+    background: #fff;
+    position: absolute;
+    right:160px;
+    bottom:30px;
+}
+a{
+    display:inline-block;
+    font-size: 24px;
+    width:48%;
+    text-align: center;
+    color:#666666;
+    text-decoration: none;
+    margin-top:24px;
+    font-weight: bold;
+}
+#section>.login>.nav-tab>a:hover{
+    color:#ff6700;
+}
+#section>.login>.nav-tab>a.first{
+    border-right:2px solid #E0E0E0;
+}
+.active{
+    color:#ff6700;
+}
+.input-itmes{
+    width:338px;
+    height:215px;
+    padding-top:10px;
+    margin:30px auto 0px;
+}
+form{
+    width:338px;
+    height:215px;
+}
+.input-itmes input{
+    width:336px;
+    height:48px;
+    margin-bottom:10px;
+    font-size: 14px;
+    padding-left:10px;
+}
+#btn{
+    margin-top: 10px;
+    display: inline-block;
+    background: #ff6700;
+    width:330px;
+    height:42px;
+    font-weight: bold;
+    outline: none;
+    color:#fff;
+    font-size: 2em;
+    border-radius: 8px;
+}
